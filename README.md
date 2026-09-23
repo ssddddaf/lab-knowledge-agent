@@ -59,4 +59,4 @@ OpenAPI 文档位于 `/docs`。关键接口是 `POST /documents`、`GET /jobs/{i
 
 ## 验证状态
 
-已在本地完成 Python 语法编译和 SQLite 存储单元测试。尚未在此环境验证 LangGraph、Qdrant、Neo4j、ColQwen2、PP-StructureV3 或模型 API 的端到端调用；部署前需完成 20 页显存试验、全链路测试和人工评测。当前简历不应写“稳定运行”或量化收益。
+已在本地完成 Python 语法编译和 SQLite 存储单元测试。尚未在此环境验证 LangGraph、Qdrant、Neo4j、ColQwen2、PP-StructureV3 或模型 API 的端到端调用；部署前需完成 20 页显存试验、全链路测试和人工评测。
