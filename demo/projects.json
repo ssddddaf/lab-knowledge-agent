@@ -1,0 +1,17 @@
+{
+  "seismic_velocity_demo": [
+    {"run_id":"r1","input_version":"seismic-v1","method":"first-arrival tomography","parameters":{"grid_m":100,"iterations":10},"status":"completed","timestamp":"2026-03-05T09:00:00","artifact":"velocity-v1","parent_run_id":null},
+    {"run_id":"r2","input_version":"seismic-v1","method":"first-arrival tomography","parameters":{"grid_m":50,"iterations":20},"status":"completed","timestamp":"2026-03-07T09:00:00","artifact":"velocity-v2","parent_run_id":"r1"},
+    {"run_id":"r3","input_version":"seismic-v2","method":"first-arrival tomography","parameters":{"grid_m":50,"iterations":30},"status":"running","timestamp":"2026-03-10T09:00:00","artifact":"velocity-v3","parent_run_id":"r2"}
+  ],
+  "gpr_profile_demo": [
+    {"run_id":"r1","input_version":"radar-v1","method":"background removal","parameters":{"window_traces":20},"status":"completed","timestamp":"2026-03-06T09:00:00","artifact":"gpr-clean-v1","parent_run_id":null},
+    {"run_id":"r2","input_version":"radar-v1","method":"migration","parameters":{"velocity_m_per_ns":0.11},"status":"completed","timestamp":"2026-03-08T09:00:00","artifact":"gpr-migrated-v1","parent_run_id":"r1"},
+    {"run_id":"r3","input_version":"radar-v2","method":"migration","parameters":{"velocity_m_per_ns":0.09},"status":"failed","timestamp":"2026-03-11T09:00:00","artifact":"gpr-migrated-v2","parent_run_id":"r2"}
+  ],
+  "joint_interpretation_demo": [
+    {"run_id":"r1","input_version":"velocity-v2+gpr-clean-v1","method":"co-registration","parameters":{"control_points":8},"status":"completed","timestamp":"2026-03-09T09:00:00","artifact":"aligned-v1","parent_run_id":null},
+    {"run_id":"r2","input_version":"aligned-v1","method":"joint interpretation","parameters":{"depth_range_m":[0,20]},"status":"completed","timestamp":"2026-03-12T09:00:00","artifact":"interpretation-v1","parent_run_id":"r1"},
+    {"run_id":"r3","input_version":"aligned-v1","method":"joint interpretation","parameters":{"depth_range_m":[0,30]},"status":"planned","timestamp":"2026-03-14T09:00:00","artifact":"interpretation-v2","parent_run_id":"r2"}
+  ]
+}

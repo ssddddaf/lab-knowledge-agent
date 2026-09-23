@@ -1,0 +1,2 @@
+{"id":"project-1","question":"seismic_velocity_demo 的 r2 使用什么网格参数，来源于哪个运行？","gold_pages":[],"project_id":"seismic_velocity_demo","required_facts":["50 m","r1"],"answerable":true,"split":"dev"}
+{"id":"project-2","question":"gpr_profile_demo 中失败的处理是哪一次？","gold_pages":[],"project_id":"gpr_profile_demo","required_facts":["r3","failed"],"answerable":true,"split":"dev"}

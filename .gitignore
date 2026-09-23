@@ -1,0 +1,13 @@
+.venv/
+.deps/
+.tools/
+__pycache__/
+.pytest_cache/
+*.pyc
+.test_*/
+tmp*/
+.env
+data/
+demo/corpus/
+demo/synthetic_smoke.pdf
+*.db
